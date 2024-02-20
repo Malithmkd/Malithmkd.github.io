@@ -24,34 +24,6 @@ body {
     z-index: 100;
 }
 
-.logo {
-    position: relative;
-    font-size: 25px;
-    color: aliceblue;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-}
-
-.navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: aliceblue;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s*var(--i));
-}
-
-.navbar a:hover {
-    color: aquamarine;
-}
-
 .home {
     position: relative;
     width: 100%;
@@ -808,5 +780,60 @@ section {
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar a {
+        margin-left: 15px;
+        font-size: 18px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content p, .about-text h2, .about-text h4, #services, .sub-title, .contact-text h2, .contact-text h4, .contact-text p {
+        font-size: 16px;
+    }
+
+    .services-list div {
+        padding: 20px;
+    }
+
+    .services-list div i {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .services-list div h2 {
+        font-size: 24px;
+    }
+
+    .read, .contact-form form .send {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+
+    .main-text h2 {
+        font-size: 40px;
+    }
+
+    .contact-icons a {
+        width: 30px;
+        height: 30px;
+        margin: 20px 10px 20px 0;
     }
 }

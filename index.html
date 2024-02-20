@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="navstyle.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#services" style="--i:3">Services</a>
-            <a href="#skills" style="--i:4">Skills</a>
-            <a href="#contact" style="--i:5">Contact me</a>
-        </nav>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#about" >About</a></li>
+            <li><a href="#services" >Services</a></li>
+            <li><a href="#skills" >Skills</a></li>
+            <li><a href="#contact" >Contactme</a></li>   
+        </ul>
+        <ul>
+            <li class="Portfolio"><a href="#" >Portfolio</a></li>
+            <li class="hideOnMobile"><a href="#home"  >Home</a></li>
+            <li class="hideOnMobile"><a href="#about" >About</a></li>
+            <li class="hideOnMobile"><a href="#services" >Services</a></li>
+            <li class="hideOnMobile"><a href="#skills" >Skills</a></li>
+            <li class="hideOnMobile"><a href="#contact" >Contact me</a></li>   
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        
+    </nav>
     </header>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
 
-    <section class="home">
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+  
+
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello,It's me</h3>
             <h1>Malith Dodangoda</h1>

@@ -17,3 +17,14 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    // Get the link elements
+    var themeStyle = document.getElementById('theme-style');
+    var darkThemeStyle = document.getElementById('dark-theme-style');
+
+    // Toggle the 'disabled' attribute to switch between themes
+    themeStyle.toggleAttribute('disabled');
+    darkThemeStyle.toggleAttribute('disabled');
+  });
