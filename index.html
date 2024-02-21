@@ -13,7 +13,7 @@
     <header class="header">
     <nav>
         <ul class="sidebar">
-            <li onclick="hideSidebar()"><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <li onclick="hideSidebar(event)"><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                 <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/>
               </svg>
               </a></li>
@@ -39,14 +39,23 @@
     </nav>
     </header>
     <script>
+        let savedScrollPosition = 0;
+
         function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            setTimeout(() => {
+            // Restore the scroll position
+            window.scrollTo(0, savedScrollPosition);
+        }, 0); 
         }
 
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
+        function hideSidebar(event){
+            event.preventDefault();
+            savedScrollPosition = window.scrollY;
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            savedScrollPosition = window.scrollY;
         }
     </script>
   
@@ -186,7 +195,7 @@
         </div>
 
         <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
+            <h1 class="heading2">Professional Skills</h1>
             <div class="radius-bars">
                 <div class="radius-bar">
                     <svg x="0px" y="0px" viewBox="0 0 200 200">
