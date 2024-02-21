@@ -26,12 +26,12 @@ body {
 
 .myimg {
     flex: 1;
-    margin-left: 20px; /* Adjust the margin as needed */
+    margin-left: 20px; 
 }
 
 .myimg img{
     border-radius: 100%;
-    height: 90%; /* Adjust the height as needed */
+    height: 90%; 
     width: 90%;
     border: 7px solid navy;
 }
@@ -281,6 +281,14 @@ section {
 }
 
 .heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.heading2 {
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -858,4 +866,12 @@ section {
         height: 30px;
         margin: 20px 10px 20px 0;
     }
+    .heading2 {
+        padding-top: 100px;
+    }
+
+    .radius-bars .radius-bar .progress-bar{
+        gap: 5px;
+    }
+   
 }
