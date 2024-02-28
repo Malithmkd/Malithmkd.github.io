@@ -19,16 +19,20 @@
               </a></li>
             <li><a href="#home" >Home</a></li>
             <li><a href="#about" >About</a></li>
-            <li><a href="#services" >Services</a></li>
             <li><a href="#skills" >Skills</a></li>
+            <li><a href="#project" >Projects</a></li>
             <li><a href="#contact" >Contactme</a></li>   
         </ul>
         <ul>
-            <li class="Portfolio"><a href="#" >Portfolio</a></li>
+            
+            <li class="Portfolio"><a href="#Portfolio" >Portfolio</a></li>
+            <a href="#" id="mode-toggle">
+                <i id="mode-icon" class='bx bx-sun bx-flip-vertical' style='color:#23d2d2'></i>
+            </a>
             <li class="hideOnMobile"><a href="#home"  >Home</a></li>
             <li class="hideOnMobile"><a href="#about" >About</a></li>
-            <li class="hideOnMobile"><a href="#services" >Services</a></li>
             <li class="hideOnMobile"><a href="#skills" >Skills</a></li>
+            <li class="hideOnMobile"><a href="#project" >Projects</a></li>
             <li class="hideOnMobile"><a href="#contact" >Contact me</a></li>   
             <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="26">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/>
@@ -77,7 +81,7 @@
                 <a href="#" style="--i:8"><i class='bx bxl-whatsapp' style='color:#ffffff' ></i></a>
                 <a href="#" style="--i:9"><i class='bx bxl-linkedin' style='color:#ffffff' ></i></a>
             </div>
-            <a href="#" class="btn-box">More About Me</a>
+            <a href="#about" class="btn-box">More About Me</a>
         </div>
 
         <div class="myimg">
@@ -87,64 +91,28 @@
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/bg2.jpg" width="100%">
-        </div>
+        
         <div class="about-text">
-            <h2>About<span>me</span></h2>
-            <h4>Front-End Developer!</h4>
+            <h2 class="about-title">About<span>me</span></h2>
+            <h4>Currently : Undergraduate !</h4>
             <p>I'm a Student who are willing to learn Software Engineering techniques and
                 willing to gather data and knowledge about coding skills etc.Throughout my career,I would 
                 like to be a genius from my side.Looking forward,I aspire to carve my path as a developer,
                 aiming to vlend creatiivity  with technical expertise to tackle complex challenges in the 
-                ever-envolving field of software engineering.
+                ever-envolving field of software engineering.<a href="cv/cv.pdf" class="btn-box" target="_blank">My CV</a>
             </p>
-            <a href="#" class="btn-box">More about me</a>
+            
         </div>
     </section>
 
-    <section>
-        <div class="services" id="services">
-            <div class="container">
-                <h1 class="sub-title">My<span>Services</span></h1>
-                <div class="services-list">
-                    <div>
-                        <i class='bx bx-code' style='color:#00d2ff' ></i>
-                        <h2>Web developing</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Dolor soluta accusantium similique amet labore cumque odio voluptatem 
-                            porro inventore dicta? Dolor dignissimos quibusdam, 
-                            laudantium enim rerum hic molestiae accusamus molestias.</p>
-                            <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bxs-data' style='color:#00d2ff'></i>
-                        <h2>Database Handling</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Dolor soluta accusantium similique amet labore cumque odio voluptatem 
-                            porro inventore dicta? Dolor dignissimos quibusdam, 
-                            laudantium enim rerum hic molestiae accusamus molestias.</p>
-                            <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bx-edit' style='color:#00d2ff'  ></i>
-                        <h2>Photoshop Editing</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Dolor soluta accusantium similique amet labore cumque odio voluptatem 
-                            porro inventore dicta? Dolor dignissimos quibusdam, 
-                            laudantium enim rerum hic molestiae accusamus molestias.</p>
-                            <a href="#" class="read">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <h1 class="sub-title">My<span> Skills</span></h1>
     <section>
+
         <div class="container1" id="skills">
+            
+
             <h1 class="heading1">Technical Skills</h1>
             <div class="technical-bars">
                 <div class="bar"><i class='bx bxl-html5' style='color:rgb(255, 0, 8)'  ></i>
@@ -246,9 +214,8 @@
                         <img src="images/fp.jpg">
                         <div class="layer">
                             <h5>Fingerprint system</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Eum quisquam qui facilis praesentium consequuntur amet dicta illo temporibus 
-                                ab sit earum, aliquam cupiditate quia, velit id mollitia quos quod ratione.
+                            <p>We have devoloped a fingerprint based-Attendance system as a project in our 1st year 2nd semester with my team.It was our
+                                very first project.
                             </p>
                             <a href="#"><i class='bx bx-fingerprint' style='color:#00eeff'  ></i></a>
                                 
@@ -256,26 +223,13 @@
                     </div>
 
                     <div class="row">
-                        <img src="images/cover.jpeg"">
+                        <img src="images/mobile.png">
                         <div class="layer">
-                            <h5>Fingerprint system</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Eum quisquam qui facilis praesentium consequuntur amet dicta illo temporibus 
-                                ab sit earum, aliquam cupiditate quia, velit id mollitia quos quod ratione.
+                            <h5>Mobile-shop Website</h5>
+                            <p>I have developed a website for a mobile phone shop where customer can experince a 
+                                very user friendly website.
                             </p>
-                            <a href="#"><i class='bx bx-fingerprint' style='color:#00eeff'  ></i></a> 
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="images/database.png">
-                        <div class="layer">
-                            <h5>Fingerprint system</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Eum quisquam qui facilis praesentium consequuntur amet dicta illo temporibus 
-                                ab sit earum, aliquam cupiditate quia, velit id mollitia quos quod ratione.
-                            </p>
-                            <a href="#"><i class='bx bx-fingerprint' style='color:#00eeff'  ></i></a>  
+                            <a href="#"><i class='bx bx-mobile' style='color:#00eeff' ></i></a> 
                         </div>
                     </div>
                 </div>
@@ -287,10 +241,9 @@
         <div class="contact-text">
             <h2>Contact<span>Me</span></h2>
             <h4>Let's make it different</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Nobis eum ipsum fuga delectus adipisci ratione deleniti quia tempora ullam, 
-                corporis quos dignissimos accusamus? 
-                Fuga sint provident dolorum natus molestias delectus?
+            <p>Feel free to reach out to me for any professional inquiries or collaborations. 
+                I am always open to new opportunities and discussions.Eventhough I'm a Undergraduate,
+                I always willing to give you the best what I can.
             </p>
             <div class="contact-list">
                 <li><i class='bx bx-send' style='color:#00eeff' ></i>WeCode@gmail.com</li>

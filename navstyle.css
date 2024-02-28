@@ -24,6 +24,7 @@ nav a {
     padding: 0 20px;
     text-decoration: none;
     font-size: 20px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     color: rgb(247, 245, 245);
@@ -74,7 +75,7 @@ nav li:first-child {
 .Portfolio a:hover{
     color: aliceblue;
 }
-@media(max-width:600px) {
+@media(max-width:780px) {
     .hideOnMobile {
         display: none;
     }
@@ -88,3 +89,10 @@ nav li:first-child {
         width: 50%;
     }
 }
+
+/* Define styles for light mode */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+

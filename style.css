@@ -6,7 +6,7 @@
     font-family: 'poppins', sans-serif;
 }
 
-body {
+body.dark-mode {
     color: aliceblue;
     background: rgb(4, 4, 4);
 }
@@ -26,19 +26,19 @@ body {
 
 .myimg {
     flex: 1;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
-.myimg img{
+.myimg img {
     border-radius: 100%;
-    height: 90%; 
+    height: 90%;
     width: 90%;
     border: 7px solid navy;
 }
 
-.myimg img:hover{
+.myimg img:hover {
     box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan;
+        0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan;
 
     transform: scale(1.1);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -150,12 +150,9 @@ body {
     gap: 1.5rem;
 }
 
-.about-img img {
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
+.about-title {
+    text-align: center;
+    padding: 40px;
 }
 
 .about-text h2 {
@@ -171,7 +168,8 @@ body {
     font-weight: 600;
     color: aliceblue;
     line-height: 1.7;
-    margin: 15px 0 30px;
+    margin: 15px 10px 30px;
+    text-decoration: underline;
 
 }
 
@@ -180,6 +178,7 @@ body {
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
+    margin: 15px 50px 30px;
 
 }
 
@@ -190,10 +189,16 @@ body {
     margin-bottom: 4rem;
 }
 
+/* Style for services section in light mode */
+body:not(.dark-mode) #services {
+    color: black;
+}
+
 .sub-title {
     text-align: center;
     font-size: 60px;
-    padding-bottom: 70px;
+    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .sub-title span {
@@ -538,43 +543,44 @@ section {
     opacity: 0;
 }
 
-.main-text{
-    padding-top: 130px;
-    margin-top: 200px;
+.main-text {
+    padding-top: 40px;
+    margin-top: 150px;
 }
 
-.main-text h2{
+.main-text h2 {
     font-size: 60px;
     line-height: 1;
     text-align: center;
 }
-.main-text h2 span{
+
+.main-text h2 span {
     color: #0ef;
 }
 
-.Portfolio-content{
+.Portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
 }
 
-.row{
+.row {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.row img{
+.row img {
     width: 100%;
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
 }
 
-.layer{
+.layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -589,24 +595,24 @@ section {
     transition: height 0.5s;
 }
 
-.layer h5{
+.layer h5 {
     color: black;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.layer p{
+.layer p {
     color: #000;
     font-size: 1rem;
     line-height: 1.8;
 }
 
-.layer i{
+.layer i {
     color: red;
-    margin-top:20px ;
+    margin-top: 20px;
     font-size: 20px;
-    background:#fff;
+    background: #fff;
     width: 60px;
     height: 60px;
     display: flex;
@@ -615,51 +621,57 @@ section {
     border-radius: 50%;
 }
 
-.row:hover img{
+.row:hover img {
     transform: scale(1.1);
 }
-.row:hover .layer{
+
+.row:hover .layer {
     height: 100%;
 }
-.contact{
+
+.contact {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 3rem;
     padding-left: 30px;
     margin-top: 130px;
 }
-.contact-text h2{
+
+.contact-text h2 {
     font-size: 90px;
     line-height: 1;
     text-align: center;
 }
-.contact-text h2 span{
+
+.contact-text h2 span {
     color: #0ef;
 }
-.contact-text h4{
+
+.contact-text h4 {
     margin: 15px 0;
     color: rgb(66, 237, 237);
     font-size: 20px;
     font-weight: 600;
 }
 
-.contact-text p{
+.contact-text p {
     color: #fff;
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 2rem;
 }
 
-.contact-list{
+.contact-list {
     margin-bottom: 3rem;
 }
 
-.contact-list li{
-    margin-bottom:10px;
+.contact-list li {
+    margin-bottom: 10px;
     display: block;
 }
-.contact-list i{
+
+.contact-list i {
     display: inline-block;
     color: #0ef;
     font-size: 20px;
@@ -667,13 +679,13 @@ section {
     transition: all .40s ease;
 }
 
-.contact-list li:hover{
+.contact-list li:hover {
     transform: scale(1.01) translateY(-5px);
     color: rgb(171, 245, 245);
     cursor: pointer;
 }
 
-.contact-icons a{
+.contact-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -688,26 +700,28 @@ section {
     margin: 30px 15px 30px 0;
     transition: .5s ease;
     opacity: 0;
-    animation:slideLeft 1s ease forwards;
+    animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s*var(--i));
 }
 
-.contact-icons a:hover{
+.contact-icons a:hover {
     background: rgb(55, 149, 161);
     color: black;
-    box-shadow: 0 0 20px #0ef,0 0 20px #0ef;
+    box-shadow: 0 0 20px #0ef, 0 0 20px #0ef;
 }
 
-.contact-form form{
+.contact-form form {
     position: relative;
 
 }
-.contact-form form input,form textarea{
+
+.contact-form form input,
+form textarea {
     border: none;
     outline: none;
     width: 90%;
     padding: 18px;
-    background:#555557;
+    background: #555557;
     color: black;
     font-size: 1rem;
     font-weight: 600;
@@ -715,12 +729,12 @@ section {
     border-radius: 0.5rem;
 }
 
-.contact-form textarea{
+.contact-form textarea {
     resize: none;
     height: 220px;
 }
 
-.contact-form form .send{
+.contact-form form .send {
     display: inline-block;
     padding: 14px 60px;
     background: #0ef;
@@ -735,13 +749,13 @@ section {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan;
 }
 
-.contact-form form .send:hover{
-    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan,
-    0 0 100px cyan,0 0 200px cyan;
+.contact-form form .send:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
     cursor: pointer;
 }
 
-.last-text p{
+.last-text p {
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -750,13 +764,13 @@ section {
     margin-top: 70px;
 }
 
-.top{
+.top {
     position: fixed;
     bottom: 2.1rem;
     right: 2.1rem;
 }
 
-.top i{
+.top i {
     color: black;
     background: #0ef;
     font-size: 20px;
@@ -831,7 +845,14 @@ section {
         font-size: 40px;
     }
 
-    .home-content p, .about-text h2, .about-text h4, #services, .sub-title, .contact-text h2, .contact-text h4, .contact-text p {
+    .home-content p,
+    .about-text h2,
+    .about-text h4,
+    #services,
+    .sub-title,
+    .contact-text h2,
+    .contact-text h4,
+    .contact-text p {
         font-size: 16px;
     }
 
@@ -848,7 +869,8 @@ section {
         font-size: 24px;
     }
 
-    .read, .contact-form form .send {
+    .read,
+    .contact-form form .send {
         padding: 12px 20px;
         font-size: 14px;
     }
@@ -866,12 +888,13 @@ section {
         height: 30px;
         margin: 20px 10px 20px 0;
     }
+
     .heading2 {
         padding-top: 100px;
     }
 
-    .radius-bars .radius-bar .progress-bar{
+    .radius-bars .radius-bar .progress-bar {
         gap: 5px;
     }
-   
+
 }
