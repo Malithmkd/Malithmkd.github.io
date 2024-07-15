@@ -72,14 +72,17 @@ nav li:first-child {
     display: none;
     color: rgb(209, 221, 232);
 }
-.Portfolio a:hover{
+
+.Portfolio a:hover {
     color: aliceblue;
 }
+
 @media(max-width:780px) {
     .hideOnMobile {
         display: none;
     }
-    .menu-button{
+
+    .menu-button {
         display: block;
     }
 }
@@ -95,4 +98,3 @@ body.light-mode {
     background-color: #ffffff;
     color: #000000;
 }
-

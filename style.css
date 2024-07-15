@@ -138,6 +138,22 @@ body.dark-mode {
     box-shadow: 0 0 5px cyan 0 0 25px cyan;
 }
 
+.btn-boxs {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(75, 172, 232);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px cyan 0 0 25px cyan;
+}
+
 .btn-box:hover {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan, 0 0 25px cyan;
@@ -180,6 +196,11 @@ body.dark-mode {
     margin-bottom: 4rem;
     margin: 15px 50px 30px;
 
+}
+
+.btn-boxs:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 25px cyan;
 }
 
 #services {
@@ -269,10 +290,6 @@ body:not(.dark-mode) #services {
     box-shadow: 0 0 20px #0ef, 0 0 20px #0ef;
 }
 
-.services-list div:hover {
-    transform: translateY(-10px);
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -282,23 +299,18 @@ section {
     width: 600px;
     height: 500px;
     padding: 75px 90px;
-    margin-left: 120px;
+    margin-left: 400px;
+    justify-content: center;
 }
+
 
 .heading1 {
     text-align: center;
     text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+    margin-bottom: 40px;
 
-.heading2 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
 }
 
 .bar {
@@ -827,7 +839,14 @@ form textarea {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .container1{
+        margin-left: 50px;
+    }
+    .last-text {
+        width: auto;
+    }
+
     .header {
         padding: 20px 5%;
     }
@@ -846,14 +865,21 @@ form textarea {
     }
 
     .home-content p,
-    .about-text h2,
-    .about-text h4,
-    #services,
-    .sub-title,
-    .contact-text h2,
     .contact-text h4,
     .contact-text p {
         font-size: 16px;
+    }
+
+    .sub-title,
+    .contact-text h2,
+    .about-title {
+        font-size: 45px;
+    }
+
+    .contact-text h2 {
+        text-align: center;
+        align-items: center;
+
     }
 
     .services-list div {
