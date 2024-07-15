@@ -1,9 +1,9 @@
-var typed = new Typed(".text",{
-    strings: ["FrontEnd Developer","Undergraduate","Programmer"],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:100,
-    loop:true
+var typed = new Typed(".text", {
+    strings: ["FrontEnd Developer", "Undergraduate", "Programmer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 100,
+    loop: true
 })
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxnvZh-rWebTLMrZq_g6F9kvprJDZOwpYXZ6fbNeDn-Fu-naiOj-EmOr-ehQZz44nzZRg/exec'
@@ -11,11 +11,11 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxnvZh-rWebTLMrZq_g6F
 const form = document.forms['contact-me']
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! your form is submitted successfully." ))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => alert("Thank you! your form is submitted successfully."))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
 })
 
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modeIcon = document.getElementById('mode-icon');
     const homeElement = document.querySelector('.home');
     const socialIcons = document.querySelectorAll('.home-sci i');
-    const aboutHeading = document.querySelector('.about-text h4');
+    const aboutHeading = document.querySelector('.about-text h4', '.about-text h3');
     const aboutParagraph = document.querySelector('.about-text p');
     const projectSection = document.getElementById('project');
     const contactHeading = document.querySelector('.contact-text h4');
@@ -56,37 +56,37 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update the color based on the mode
         modeIcon.style.color = isDarkMode ? '#ffffff' : '#000000'; // Change to black for light mode
     }
-   // Function to update navigation links color based on the mode
-function updateNavLinksColor(isDarkMode) {
-    const navLinksColor = isDarkMode ? '#ffffff' : 'black';
-    const navLinksHoverColor = isDarkMode ? '#23d2d2' : 'darkblue';
+    // Function to update navigation links color based on the mode
+    function updateNavLinksColor(isDarkMode) {
+        const navLinksColor = isDarkMode ? '#ffffff' : 'black';
+        const navLinksHoverColor = isDarkMode ? '#23d2d2' : 'darkblue';
 
-    navLinks.forEach(link => {
-        link.style.color = navLinksColor;
-        link.style.transition = 'color 0.3s ease';
-
-        // Add hover effect
-        link.addEventListener('mouseenter', () => {
-            link.style.color = navLinksHoverColor;
-        });
-
-        // Remove hover effect
-        link.addEventListener('mouseleave', () => {
+        navLinks.forEach(link => {
             link.style.color = navLinksColor;
+            link.style.transition = 'color 0.3s ease';
+
+            // Add hover effect
+            link.addEventListener('mouseenter', () => {
+                link.style.color = navLinksHoverColor;
+            });
+
+            // Remove hover effect
+            link.addEventListener('mouseleave', () => {
+                link.style.color = navLinksColor;
+            });
         });
-    });
-}
+    }
     // Function to update styles for specific elements
     function updateElementStyles(isDarkMode) {
 
         // Update SVG color based on the mode
-    const svgColor = isDarkMode ? '#ffffff' : 'black';
+        const svgColor = isDarkMode ? '#ffffff' : 'black';
 
-    const svgElements = document.querySelectorAll('.menu-button svg, li:not(.menu-button) svg');
+        const svgElements = document.querySelectorAll('.menu-button svg, li:not(.menu-button) svg');
 
-    svgElements.forEach(svg => {
-        svg.querySelector('path').style.fill = svgColor;
-    });
+        svgElements.forEach(svg => {
+            svg.querySelector('path').style.fill = svgColor;
+        });
 
         // Check if the user has a preference for dark mode in localStorage
         const savedDarkMode = localStorage.getItem('darkMode');
@@ -155,9 +155,9 @@ function updateNavLinksColor(isDarkMode) {
         event.preventDefault();
         toggleDarkMode();
 
-         // After changing the mode, update navigation links color
-         const isDarkMode = document.body.classList.contains('dark-mode');
-         updateNavLinksColor(isDarkMode);
+        // After changing the mode, update navigation links color
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        updateNavLinksColor(isDarkMode);
     });
 
     // Add click event listener to the Portfolio link

@@ -189,6 +189,14 @@ body.dark-mode {
 
 }
 
+.about-text h3{
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 15px 10px 30px;
+    text-decoration: underline;
+}
+
 .about-text p {
     color: aliceblue;
     font-size: 20px;
