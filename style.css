@@ -932,3 +932,22 @@ form textarea {
     }
 
 }
+
+@media (max-width: 768px) {
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding-left: 0;
+        margin-top: 130px;
+    }
+    .contact-form{
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;
+    }
+}
+
